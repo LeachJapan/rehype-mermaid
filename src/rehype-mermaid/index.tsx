@@ -1,6 +1,6 @@
 import {visit} from "unist-util-visit";
 import {hasProperty} from 'hast-util-has-property'
-import MermaidBlock from "../MermaidBlock";
+import MermaidBlock from "./MermaidBlock";
 
 export default function rehypeMermaid(options: any) {
     return (tree: any) => {
@@ -11,7 +11,7 @@ export default function rehypeMermaid(options: any) {
                 // console.log("parent", parent)
                 //
                 // console.log("className", node.properties.className)
-                if (node.properties.className.indexOf("language-mermaid") != -1) {
+                if (node.properties.className.indexOf("language-mermaid") !== -1) {
                     const text = node.children[0].value
                     // console.log(text)
                     parent.children[index] = {

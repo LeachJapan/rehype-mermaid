@@ -1,4 +1,4 @@
-import rehypeMermaid from "./components/rehype-mermaid";
+import rehypeMermaid from "./rehype-mermaid";
 
 
 export default rehypeMermaid;
