@@ -1,0 +1,37 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import rehypeTest from "./components/rehype-mermaid";
+import ReactMarkdown from 'react-markdown';
+
+export default rehypeTest;
+
+ReactDOM.render(
+    <React.StrictMode>
+        <ReactMarkdown
+            rehypePlugins={[rehypeTest]}
+        >
+            {`
+\`\`\`mermaid
+graph TB;
+    X-->0
+    X-->1
+    0-->00
+    0-->01
+    00-->000
+    00-->001
+    01-->010
+    01-->011
+    1-->10
+    1-->11
+    10-->100
+    10-->101
+    11-->110
+    11-->111
+
+\`\`\`
+            `}
+        </ReactMarkdown>
+    </React.StrictMode>,
+    document.getElementById('root')
+);
+
