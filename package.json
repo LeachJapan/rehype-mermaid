@@ -1,6 +1,6 @@
 {
-  "name": "@bitekong/rehype-mermaid",
-  "version": "0.1.0",
+  "name": "rehype-mermaid",
+  "version": "0.1.5",
   "author": "bitekong",
   "license": "MIT",
   "repository": "bitekong/rehype-mermaid",
